@@ -34,6 +34,29 @@
     });
   }
 
+  // Language dropdown
+  const langWrap = document.querySelector('.header-lang');
+  const langBtn = langWrap ? langWrap.querySelector('.header-lang__btn') : null;
+  if (langWrap && langBtn) {
+    langBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const open = langWrap.classList.toggle('is-open');
+      langBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('click', (e) => {
+      if (!langWrap.contains(e.target)) {
+        langWrap.classList.remove('is-open');
+        langBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        langWrap.classList.remove('is-open');
+        langBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
   // Reveal on scroll
   const reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {

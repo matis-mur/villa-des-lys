@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Home -->
+  <url>
+    <loc>https://matis-mur.github.io/villa-des-lys/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://matis-mur.github.io/villa-des-lys/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matis-mur.github.io/villa-des-lys/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matis-mur.github.io/villa-des-lys/"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://matis-mur.github.io/villa-des-lys/en/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://matis-mur.github.io/villa-des-lys/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matis-mur.github.io/villa-des-lys/en/"/>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Tarifs / Rates -->
+  <url>
+    <loc>https://matis-mur.github.io/villa-des-lys/pages/tarifs.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://matis-mur.github.io/villa-des-lys/pages/tarifs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matis-mur.github.io/villa-des-lys/en/tarifs.html"/>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://matis-mur.github.io/villa-des-lys/en/tarifs.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://matis-mur.github.io/villa-des-lys/pages/tarifs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matis-mur.github.io/villa-des-lys/en/tarifs.html"/>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Photos -->
+  <url>
+    <loc>https://matis-mur.github.io/villa-des-lys/pages/photos.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://matis-mur.github.io/villa-des-lys/pages/photos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matis-mur.github.io/villa-des-lys/en/photos.html"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://matis-mur.github.io/villa-des-lys/en/photos.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://matis-mur.github.io/villa-des-lys/pages/photos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matis-mur.github.io/villa-des-lys/en/photos.html"/>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Fiers de / What we love -->
+  <url>
+    <loc>https://matis-mur.github.io/villa-des-lys/pages/fiers-de.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://matis-mur.github.io/villa-des-lys/pages/fiers-de.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matis-mur.github.io/villa-des-lys/en/fiers-de.html"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://matis-mur.github.io/villa-des-lys/en/fiers-de.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://matis-mur.github.io/villa-des-lys/pages/fiers-de.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matis-mur.github.io/villa-des-lys/en/fiers-de.html"/>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Acquérir / Acquire -->
+  <url>
+    <loc>https://matis-mur.github.io/villa-des-lys/pages/acquerir.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://matis-mur.github.io/villa-des-lys/pages/acquerir.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matis-mur.github.io/villa-des-lys/en/acquerir.html"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://matis-mur.github.io/villa-des-lys/en/acquerir.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://matis-mur.github.io/villa-des-lys/pages/acquerir.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matis-mur.github.io/villa-des-lys/en/acquerir.html"/>
+    <priority>0.6</priority>
+  </url>
+</urlset>

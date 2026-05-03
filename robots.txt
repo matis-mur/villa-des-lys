@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://matis-mur.github.io/villa-des-lys/sitemap.xml
