@@ -1624,6 +1624,153 @@ em { font-family: var(--font-serif); font-style: italic; }
 .has-fixed-header { padding-top: var(--header-height); }
 
 /* ============================================
+   BOOKING CALENDAR (Airbnb-synced)
+   ============================================ */
+.vdl-cal {
+  font-family: var(--font-sans);
+  max-width: 270px;
+  margin: 0 auto 1rem;
+  padding: 0.5rem 0.5rem 0.4rem;
+  border: 1px solid var(--color-line-soft);
+  background: #fff;
+}
+
+.vdl-cal__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+}
+
+.vdl-cal__month {
+  font-family: var(--font-display);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+}
+
+.vdl-cal__nav {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 0.95rem;
+  line-height: 1;
+  color: var(--color-olive);
+  background: transparent;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.vdl-cal__nav:hover { background: var(--color-bg-alt); }
+
+.vdl-cal__weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  font-family: var(--font-display);
+  font-size: 0.54rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  text-align: center;
+  margin-bottom: 0.15rem;
+}
+
+.vdl-cal__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0;
+}
+
+.vdl-cal__cell {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.68rem;
+  background: transparent;
+  color: var(--color-ink);
+  border-radius: 50%;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+
+.vdl-cal__cell--empty { visibility: hidden; }
+
+.vdl-cal__cell--avail {
+  color: var(--color-ink);
+  font-weight: 500;
+  cursor: pointer;
+}
+.vdl-cal__cell--avail:hover { background: var(--color-bg-alt); }
+
+.vdl-cal__cell--past,
+.vdl-cal__cell--blocked {
+  color: var(--color-bg-mute);
+  text-decoration: line-through;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.vdl-cal__cell--checkin,
+.vdl-cal__cell--checkout {
+  background: var(--color-olive-deep);
+  color: #fff;
+  font-weight: 600;
+}
+
+.vdl-cal__cell--inrange {
+  background: var(--color-bg-alt);
+  border-radius: 0;
+}
+
+.vdl-cal__hint {
+  margin-top: 0.4rem;
+  font-size: 0.62rem;
+  color: var(--color-ink-soft);
+  text-align: center;
+  min-height: 1em;
+}
+
+.vdl-cal__legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+  font-size: 0.56rem;
+  color: var(--color-muted);
+}
+
+.vdl-cal__legend > span { display: inline-flex; align-items: center; gap: 0.25rem; }
+
+.vdl-cal__sw {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+.vdl-cal__sw--avail { background: var(--color-ink); }
+.vdl-cal__sw--blocked { background: var(--color-bg-mute); }
+
+.vdl-cal__reset {
+  margin-left: auto;
+  font-family: var(--font-display);
+  font-size: 0.54rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-olive);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  background: transparent;
+  padding: 0.1rem 0.25rem;
+}
+
+/* In booking modal: hide the manual date inputs since calendar drives them */
+.booking-modal .booking-widget__field--date { display: none; }
+
+/* ============================================
    MEDIA QUERIES (regroupées)
    ============================================ */
 

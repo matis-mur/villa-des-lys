@@ -1,0 +1,42 @@
+name: Sync Airbnb availability
+
+on:
+  schedule:
+    # Toutes les 3 heures
+    - cron: '0 */3 * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/sync_airbnb.py'
+      - '.github/workflows/sync-airbnb.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Sync iCal feeds
+        env:
+          AIRBNB_ICAL_URL_1: ${{ secrets.AIRBNB_ICAL_URL_1 }}
+          AIRBNB_ICAL_URL_2: ${{ secrets.AIRBNB_ICAL_URL_2 }}
+        run: python3 scripts/sync_airbnb.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain assets/data/availability.json)" ]; then
+            git add assets/data/availability.json
+            git commit -m "chore: refresh Airbnb availability"
+            git push
+          else
+            echo "No changes to commit."
+          fi
