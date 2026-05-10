@@ -76,8 +76,10 @@ def expand(ranges: list[tuple[date, date]]) -> set[date]:
 def main() -> int:
     urls = collect_ical_urls()
     if not urls:
-        print(f"No iCal URLs found (set {ENV_PREFIX}_1, {ENV_PREFIX}_2, ...).", file=sys.stderr)
-        return 1
+        # No secrets configured yet — exit successfully so the workflow doesn't
+        # spam failure emails before AIRBNB_ICAL_URL_* are added in repo settings.
+        print(f"No iCal URLs configured (set {ENV_PREFIX}_1, {ENV_PREFIX}_2, ... in GitHub Secrets). Skipping.")
+        return 0
 
     blocked: set[date] = set()
     for i, url in enumerate(urls, 1):
